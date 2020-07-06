@@ -87,10 +87,10 @@
         <!-- MicroProfile versions -->
         <version.microprofile.restclient>1.4.1</version.microprofile.restclient>
         <version.microprofile.config>1.4</version.microprofile.config>
-        <version.microprofile.context-propagation>1.0.1</version.microprofile.context-propagation>
+        <version.microprofile.context-propagation>1.1</version.microprofile.context-propagation>
 
         <!-- SmallRye versions -->
-        <version.io.smallrye.context-propagation>1.0.1</version.io.smallrye.context-propagation>
+        <version.io.smallrye.context-propagation>1.1.0</version.io.smallrye.context-propagation>
         <version.io.smallrye.smallrye-config>1.6.1</version.io.smallrye.smallrye-config>
 
         <version.io.reactivex.rxjava2-rxjava>2.2.14</version.io.reactivex.rxjava2-rxjava>
@@ -947,6 +947,11 @@
             <dependency>
                 <groupId>io.smallrye</groupId>
                 <artifactId>smallrye-context-propagation-propagators-rxjava2</artifactId>
+                <version>${version.io.smallrye.context-propagation}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.smallrye</groupId>
+                <artifactId>smallrye-context-propagation-storage</artifactId>
                 <version>${version.io.smallrye.context-propagation}</version>
             </dependency>
             <dependency>

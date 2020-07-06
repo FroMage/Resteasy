@@ -1,7 +1,7 @@
 package org.jboss.resteasy.core;
 
 import org.jboss.resteasy.resteasy_jaxrs.i18n.Messages;
-import org.jboss.resteasy.util.ThreadLocalStack;
+import org.jboss.resteasy.util.ContextualStack;
 
 import javax.ws.rs.BadRequestException;
 import javax.ws.rs.core.UriInfo;
@@ -16,7 +16,7 @@ public final class ResteasyContext
       void close();
    }
 
-   private static final ThreadLocalStack<Map<Class<?>, Object>> contextualData = new ThreadLocalStack<Map<Class<?>, Object>>();
+   private static final ContextualStack contextualData = new ContextualStack();
 
    private static final int maxForwards = 20;
 
@@ -97,5 +97,4 @@ public final class ResteasyContext
    {
       contextualData.pop();
    }
-
 }

@@ -37,7 +37,7 @@ import java.util.Map.Entry;
 @SuppressWarnings("rawtypes")
 public class MessageBodyParameterInjector implements ValueInjector, JaxrsInterceptorRegistryListener
 {
-   private static ThreadLocalStack<Object> bodyStack = new ThreadLocalStack<Object>();
+   private static ThreadLocalStack<Object> bodyStack = new ThreadLocalStack<>();
 
    public static void pushBody(Object o)
    {

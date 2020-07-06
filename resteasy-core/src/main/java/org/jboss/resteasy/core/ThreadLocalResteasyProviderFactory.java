@@ -51,7 +51,7 @@ import java.util.Set;
 @SuppressWarnings("rawtypes")
 public final class ThreadLocalResteasyProviderFactory extends ResteasyProviderFactoryImpl implements ProviderFactoryDelegate
 {
-   private static final ThreadLocalStack<ResteasyProviderFactory> delegate = new ThreadLocalStack<ResteasyProviderFactory>();
+   private static final ThreadLocalStack<ResteasyProviderFactory> delegate = new ThreadLocalStack<>();
 
    private final ResteasyProviderFactory defaultFactory;
 
